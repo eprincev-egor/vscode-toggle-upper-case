@@ -1,0 +1,37 @@
+{
+    "name": "toggle-upper-case",
+    "displayName": "toggle-upper-case",
+    "description": "Toggle UPPER_CASE and snake_case",
+    "version": "0.0.1",
+    "publisher": "eprincev-egor",
+    "engines": {
+        "vscode": "^1.24.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.toggleUpperCase"
+    ],
+    "main": "./lib/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.toggleUpperCase",
+                "title": "Toggle UPPER_snake"
+            }
+        ],
+        "keybindings": {
+            "key": "Ctrl+U",
+            "command": "extension.toggleUpperCase",
+            "when": "editorTextFocus"
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "vscode": "^1.1.6",
+        "eslint": "^4.11.0"
+    }
+}
